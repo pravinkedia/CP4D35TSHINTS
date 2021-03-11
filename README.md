@@ -95,18 +95,18 @@ Find section "affinity:" And you should see one "preferredXXXX" section and one
 
 Remove the entire preferred section and edit the required section so it looks just like the following i.e two rules in the required section
 
-   spec:
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: beta.kubernetes.io/arch
-                operator: In
-                values:
-                - amd64
-              - key: dv-dedicated-engine
-                operator: Exists
+             spec:
+                affinity:
+                    nodeAffinity:
+                           requiredDuringSchedulingIgnoredDuringExecution:
+                                  nodeSelectorTerms:
+                                  - matchExpressions:
+                                       - key: beta.kubernetes.io/arch
+                                          operator: In
+                                          values:
+                                          - amd64
+                                       - key: dv-dedicated-engine
+                                         operator: Exists
 
 #### For dv-worker
 
