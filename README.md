@@ -118,16 +118,16 @@ oc edit statefulset dv-worker
 
 Find the preferred section, remove and edit required section, two rules
 
-   spec:
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: beta.kubernetes.io/arch
-                operator: In
-                values:
-                - amd64
-              - key: dv-dedicated-worker
-                operator: Exists
+             spec:
+                affinity:
+                    nodeAffinity:
+                           requiredDuringSchedulingIgnoredDuringExecution:
+                                  nodeSelectorTerms:
+                                  - matchExpressions:
+                                       - key: beta.kubernetes.io/arch
+                                          operator: In
+                                          values:
+                                          - amd64
+                                       - key: dv-dedicated-worker
+                                         operator: Exists
 
