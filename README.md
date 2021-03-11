@@ -116,7 +116,7 @@ This is to have a backup in case things get messed up, so you can use it add ba
 
 oc edit statefulset dv-worker
 
-Find the preferred section, remove and edit required section, two rules (edited)
+Find the preferred section, remove and edit required section, two rules
 
    spec:
       affinity:
@@ -130,3 +130,4 @@ Find the preferred section, remove and edit required section, two rules (edited
                 - amd64
               - key: dv-dedicated-worker
                 operator: Exists
+
